@@ -1,0 +1,11 @@
+My program can be compiled by typing make at the command prompt.
+
+C:> make
+
+After make runs succesfully there should be a Main.exe in the directory.
+
+C:> Main.exe [host] [port]
+
+Host and port are both required or Main.exe will do nothing but print command usage.
+
+Once the program is running it should prompt for anything that must be entered.
