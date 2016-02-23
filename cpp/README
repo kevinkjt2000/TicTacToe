@@ -1,11 +1,9 @@
-My program can be compiled by typing make at the command prompt.
+This TicTacToe was tested on both Linux and Windows.  You will need to install gnuwin32 make and tdm-gcc on windows to be able to use the makefile.
 
-C:> make
+To compile:
+$ make
 
-After make runs succesfully there should be a Main.exe in the directory.
+To run:
+$ ./Main.exe [host] [port]
 
-C:> Main.exe [host] [port]
-
-Host and port are both required or Main.exe will do nothing but print command usage.
-
-Once the program is running it should prompt for anything that must be entered.
+Once the program is running on client and server, it should prompt for anything that must be entered.
