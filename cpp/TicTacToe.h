@@ -15,13 +15,13 @@
 class TicTacToe
 {
 private:
-	char board[3][3];
+   char board[3][3];
    
 public:
-	TicTacToe();
-	bool SetValue(int row, int col, int playerIndex);
-	int GetStatus();
-	friend std::ostream& operator<< (std::ostream&, const TicTacToe&);
+   TicTacToe();
+   bool SetValue(int row, int col, int playerIndex);
+   int GetStatus();
+   friend std::ostream& operator<< (std::ostream&, const TicTacToe&);
 };
 
 #endif

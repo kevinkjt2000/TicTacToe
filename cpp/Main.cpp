@@ -193,7 +193,7 @@ int main(int argc, char** argv)
       exit(0);
    }
    
-	srand(time(NULL)); //just to make things random
+   srand(time(NULL)); //just to make things random
    
    bool isServer = false;
    
@@ -537,4 +537,3 @@ int main(int argc, char** argv)
    closesocket(serverSock);
    graceful_exit(0);
 }
-
