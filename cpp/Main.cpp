@@ -42,20 +42,6 @@ void graceful_exit(int exit_code)
    exit(exit_code);
 }
 
-// u_long stringIP_to_intIP(char* chars)
-// {
-   // u_long ret_value = 0;
-   // char *curr = strtok(chars, ".");
-   // int shift = 24;
-   // while(curr != NULL)
-   // {
-      // ret_value += atoi(curr) << shift;
-      // curr = strtok(NULL , ".");
-      // shift -= 8;
-   // }
-   // return ret_value;
-// }
-
 SOCKET start_server(char *IP, char *port)
 {
    struct hostent* hent = gethostbyname(IP);
@@ -149,8 +135,6 @@ void send_msg(SOCKET sock, char *msg)
    {
       std::cerr << "Send error." << std::endl;
    }
-   
-   //closesocket(sock);
 }  
 
 char* get_msg(SOCKET sock)
@@ -167,7 +151,6 @@ char* get_msg(SOCKET sock)
       std::cerr << "Receive error." << std::endl;
    }
 
-   //closesocket(sock);
    return buffer;
 }
 
