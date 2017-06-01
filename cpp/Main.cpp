@@ -336,7 +336,7 @@ int main(int argc, char** argv)
       
       std::cout << "Deciding who has the first turn...\n";
       turn = rand() % 2;
-      char msg[] = {turn + '0', '\0'};
+      char msg[] = {static_cast<char>(turn + '0'), '\0'};
       send_msg(clientSock, msg);
    }
    else
@@ -398,7 +398,7 @@ int main(int argc, char** argv)
                std::cout << "Enter row <space> column (both have to be 1-3 and the location must be empty): ";
                std::cin >> row >> col;
             }
-            char msg[] = {row + '0', ' ', col + '0', '\0'};
+            char msg[] = {static_cast<char>(row + '0'), ' ', static_cast<char>(col + '0'), '\0'};
             send_msg(clientSock, msg);
          }
          else
@@ -436,7 +436,7 @@ int main(int argc, char** argv)
                std::cout << "Enter row <space> column (both have to be 1-3 and the location must be empty): ";
                std::cin >> row >> col;
             }
-            char msg[] = {row + '0', ' ', col + '0', '\0'};
+            char msg[] = {static_cast<char>(row + '0'), ' ', static_cast<char>(col + '0'), '\0'};
             send_msg(serverSock, msg);
          }
       }
