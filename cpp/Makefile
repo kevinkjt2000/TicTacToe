@@ -29,9 +29,9 @@ Main.exe : Main.o TicTacToe.o
 Main.o : Main.cpp
 	g++ -o Main.o $(OPTS) Main.cpp
 
-TicTacToe.o : TicTacToe.cpp
+TicTacToe.o : TicTacToe.cpp TicTacToe.h
 	g++ -o TicTacToe.o $(OPTS) TicTacToe.cpp
 
 .PHONY : clean
-clean : 
+clean :
 	rm -f *.o Main.exe
