@@ -4,4 +4,4 @@ compiler:
 - gcc
 os:
 - linux
-script: make && make test
+script: cd cpp && make && make test
