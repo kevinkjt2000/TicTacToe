@@ -1,9 +1,11 @@
 language: cpp
+os: linux
 dist: trusty
 script: cd cpp && make
 matrix:
   include:
-  - os: linux
+  - compiler:
+    - g++
     addons:
       apt:
         sources:
@@ -12,6 +14,5 @@ matrix:
         - g++-6
     before_install:
     - eval "CXX=g++-6"
-  - os: linux
-    compiler:
+  - compiler:
     - clang
