@@ -9,10 +9,8 @@ matrix:
         - ubuntu-toolchain-r-test
         packages:
         - g++-6
-    env:
-    - MATRIX_EVAL="CC=gcc-6 && CXX=g++-6"
+    before_install:
+    - eval "CXX=g++-6"
   - os: linux
     compiler:
     - clang
-before_install:
-- eval "${MATRIX_EVAL}"
