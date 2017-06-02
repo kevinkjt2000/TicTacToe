@@ -1,4 +1,4 @@
-SYS := $(shell g++ -dumpmachine)
+SYS := $(shell $(CXX) -dumpmachine)
 
 OPTS = -std=c++11 -c -O2 -g -Wall -Wextra -Werror -pedantic -pedantic-errors
 
@@ -24,13 +24,13 @@ run : all
 	./Main.exe 127.0.0.1 10020
 
 Main.exe : Main.o TicTacToe.o
-	g++ -o Main.exe Main.o TicTacToe.o $(LIBS)
+	$(CXX) -o Main.exe Main.o TicTacToe.o $(LIBS)
 
 Main.o : Main.cpp
-	g++ -o Main.o $(OPTS) Main.cpp
+	$(CXX) -o Main.o $(OPTS) Main.cpp
 
 TicTacToe.o : TicTacToe.cpp TicTacToe.h
-	g++ -o TicTacToe.o $(OPTS) TicTacToe.cpp
+	$(CXX) -o TicTacToe.o $(OPTS) TicTacToe.cpp
 
 .PHONY : clean
 clean :
