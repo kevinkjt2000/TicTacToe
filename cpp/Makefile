@@ -1,6 +1,6 @@
 SYS := $(shell g++ -dumpmachine)
 
-OPTS = -c -O2 -g
+OPTS = -std=c++11 -c -O2 -g -Wall -Wextra -Werror -pedantic -pedantic-errors
 
 ifneq (,$(findstring linux,$(SYS)))
 	LIBS =
