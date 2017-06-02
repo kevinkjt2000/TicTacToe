@@ -188,7 +188,11 @@ int main(int argc, char** argv)
       WSAStartup(MAKEWORD(2, 2), &wsaData);
    #endif
    SOCKET serverSock = connect_to_server(argv[1], argv[2]);
-   SOCKET clientSock;
+   #ifdef WIN32
+      SOCKET clientSock = INVALID_SOCKET;
+   #else
+      SOCKET clientSock = -1;
+   #endif
    #ifdef WIN32
       if(serverSock == INVALID_SOCKET)
    #else
