@@ -6,9 +6,11 @@ ifneq (,$(findstring linux,$(SYS)))
 	LIBS =
 else
 	ifneq (,$(findstring mingw,$(SYS)))
+		OPTS += -DWIN32
 		LIBS = -lwsock32
 	else
 		ifneq (,$(findstring cygwin,$(SYS)))
+			OPTS += -DWIN32
 			LIBS = -lwsock32
 		else
 			LIBS =
