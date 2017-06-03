@@ -1,8 +1,6 @@
 version: 1.0.{build}
 install:
 - cinst make
-- cinst mingw
-environment:
-  CXX: C:\tools\mingw64\bin\g++.exe
+- set PATH=C:\MinGW\bin;%PATH%
 build_script:
 - cd cpp && make
