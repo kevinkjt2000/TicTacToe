@@ -1,4 +1,5 @@
 install:
 - cinst make
+- cinst mingw
 build_script:
 - cd cpp && make
