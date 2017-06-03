@@ -1,6 +1,5 @@
 version: 1.0.{build}
 install:
-- cinst make
 - set PATH=C:\MinGW\bin;%PATH%
 build_script:
-- cd cpp && make
+- cd cpp && mingw32-make
