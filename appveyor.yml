@@ -1,4 +1,4 @@
 install:
 - cinst make
 build_script:
-- make
+- cd cpp && make
