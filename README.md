@@ -1,2 +1,2 @@
 # TicTacToe [![Build Status](https://travis-ci.org/kevinkjt2000/TicTacToe.svg?branch=master)](https://travis-ci.org/kevinkjt2000/TicTacToe) [![Appveyor Build Status](https://ci.appveyor.com/api/projects/status/github/kevinkjt2000/TicTacToe?branch=master&svg=true)](https://ci.appveyor.com/project/kevinkjt2000/TicTacToe?branch=master)
-C++ network version of TicTacToe that I wrote while I was an undergrad.
+C++ network version of TicTacToe that I originally wrote while I was an undergrad.  Since that time, I have worked to clean the code up a bit and create automated testing.
