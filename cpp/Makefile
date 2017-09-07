@@ -34,6 +34,10 @@ Main.o : Main.cpp
 TicTacToe.o : TicTacToe.cpp TicTacToe.h
 	$(CXX) -o TicTacToe.o $(OPTS) TicTacToe.cpp
 
+.PHONY : clang-format
+clang-format:
+	for f in *.cpp *.h; do clang-format $$f | sponge $$f; done
+
 .PHONY : clean
 clean :
 	rm -f *.o Main.exe

@@ -1,6 +1,6 @@
 /**************************************************************************
  *   Filename: TicTacToe.h                                Date: 2/12/2010 *
- *   Author: Kevin Tindall                                                * 
+ *   Author: Kevin Tindall                                                *
  *------------------------------------------------------------------------*
  *            Header file for TicTacToe class definition                  *
  *------------------------------------------------------------------------*
@@ -12,16 +12,15 @@
 
 #include <iostream>
 
-class TicTacToe
-{
+class TicTacToe {
 private:
-   char board[3][3];
-   
+  char board[3][3];
+
 public:
-   TicTacToe();
-   bool SetValue(int row, int col, int playerIndex);
-   int GetStatus();
-   friend std::ostream& operator<< (std::ostream&, const TicTacToe&);
+  TicTacToe();
+  bool SetValue(int row, int col, int playerIndex);
+  int GetStatus();
+  friend std::ostream& operator<<(std::ostream&, const TicTacToe&);
 };
 
 #endif
