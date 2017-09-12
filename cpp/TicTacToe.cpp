@@ -33,7 +33,6 @@ TicTacToe::TicTacToe() {
 
 // function to set a marker X or O on the game board
 // SetValue returns true only for legal moves
-// TODO(Kevin): check number of x's and number
 bool TicTacToe::SetValue(int rowIndex, int colIndex, int playerIndex) {
   // check for invalid range on game board
   if (rowIndex < 0 || rowIndex > 2 || colIndex < 0 || colIndex > 2) {
