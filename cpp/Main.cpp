@@ -1,5 +1,4 @@
 /*******************************************************************
- *   Filename: prog1.cpp                           Date: 2/12/2010 *
  *   Author: Kevin Tindall                                         *
  *-----------------------------------------------------------------*
  *                      Tic-Tac-Toe Game                           *
@@ -337,26 +336,7 @@ int main(int argc, char** argv) {
 
     bool isServerFirst = (turn == 0);
 
-    // std::string name = ""; //for reading a name inputted by the user
-    // while(name == "")
-    // {
-    // std::cout << "Please enter your name: ";
-    // std::cin >> name;
-    // std::cin.ignore(80, '\n');
-    // }
-
-    // std::string opponentName; //for storing the opponents name
-    // while(opponentName == name)
-    // {
-    // std::cout << "Please enter a name that is different from your opponent's
-    // name: ";
-    // std::cin >> name;
-    // std::cin.ignore(80, '\n');
-    // }
-    // std::cout << "\n";
-
     // output who won the toss
-    // std::cerr << turn;
     if ((isServerFirst && isServer) || (!isServerFirst && !isServer))
       std::cout << "You won the first move.\n";
     else
